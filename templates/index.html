@@ -1,0 +1,55 @@
+{% extends "page_maitre.html" %}
+{% block content %}
+
+    <body class="container" style="background-color: #76b5c5">
+    <h2 class="text-center"> Les Camions </h2>
+    <br>
+    <table class="table table-striped table-bordered table-dark">
+        <tr class="font-weight-bold text-center text-uppercase h5">
+
+            <td>
+                #
+            </td>
+
+            <td class="text-left">
+                Immatriculation
+            </td>
+
+            <td class="text-center">
+                Poids (KG)
+            </td>
+
+            <td class="text-right">
+                Consomation
+            </td>
+
+        </tr>
+        {% for camion in camions %}
+
+            <tr>
+                <td>
+                    {{ camion.id_camion }}
+                </td>
+
+                <td>
+                    {{ camion.immatriculation }}
+                </td>
+
+                <td class="text-center">
+                    {{ camion.poids }}
+                </td>
+
+                <td class="text-right">
+                    {{ camion.consomation }} L/100km
+                </td>
+            </tr>
+        {% endfor %}
+
+
+    </table>
+
+
+    </body>
+
+
+{% endblock %}

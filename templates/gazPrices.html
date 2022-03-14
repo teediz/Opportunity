@@ -1,0 +1,16 @@
+{% extends "page_maitre.html" %}
+{% block content %}
+
+    <body class="container" style="background-color: #76b5c5">
+
+
+    {% for key, value in prixGaz.items() %}
+
+        {{ key }}
+        {{ value }}
+
+    {% endfor %}
+
+
+    </body>
+{% endblock %}
